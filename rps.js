@@ -1,7 +1,7 @@
 /* Rock Paper Scissors Java Script Oden Project*/
 
 function getComputerChoice() {                  // computer selection
-    var num = Math.floor(Math.random() * 3);
+    let num = Math.floor(Math.random() * 3);
 
     if (num == 0) {
         return "rock";
@@ -17,42 +17,68 @@ function getComputerChoice() {                  // computer selection
 function playRound(playerSelection, computerSelection) {    // play single round of game
     
     if (playerSelection === computerSelection) {
-        return "Tie!";
+        return 2;
     }
-    else if (playerSelection == "rock") { 
-        if (computerSelection == "paper") {           
-            return "You Lose! Paper beats Rock";
+    else if (playerSelection === "rock" && computerSelection === "paper") { 
+        return 1;
+    }
+    else if (playerSelection === "scissors" && computerSelection === "rock") {
+            return 1;
         }
-    }
-    else if (playerSelection == "scissors") {
-        if (computerSelection == "rock") {
-            return "You Lose! Rock beats Scissors";
-        }
-    }
-    else if (playerSelection == "paper") {
-        if (computerSelection == "scissors") {
-            return "You Lose! Scissors beats Paper";
-       }
-    }
-    else if (playerSelection == "rock") {
-        if (computerSelection == "scissors") {
-            return "You Win... Rock beats Paper";
-        }
-    }
-    else if (playerSelection == "scissors") { 
-        if (computerSelection == "paper") {
-            return "You Win... Scissors beats Paper";
-        }
-    }
-    else if (playerSelection == "paper") { 
-        if (computerSelection == "rock") {
-            return "You Win... Paper beats Rock";
-        }
-    }
     
+    else if (playerSelection === "paper" && computerSelection === "scissors") {
+            return 1;
+    }
+    else {
+        return 0;
+    }
+
 }
 
-const playerSelection = prompt("Enter Rock, Paper or Scissors").toLowerCase();  // make it case-insensitive
-const computerSelection = getComputerChoice();
 
-console.log(playRound(playerSelection, computerSelection))
+
+function game() {               // game function, plays game best of 5               
+
+    let computerWins = 0;
+    let playerWins = 0;
+    let winner = 0;
+    let winnerYet = false;
+    
+    while (!winnerYet) {
+        const playerSelection = prompt("Enter Rock, Paper or Scissors").toLowerCase();
+        const computerSelection = getComputerChoice().toLowerCase();
+        
+        winner = playRound(playerSelection, computerSelection);
+
+        console.log("Computer Plays...", computerSelection);
+        console.log("Player Plays...", playerSelection)
+
+        if (winner === 1) {
+            computerWins += 1;
+        }
+        else if (winner === 0) {
+            playerWins += 1;
+        }
+        else {
+            computerWins += 0;
+            playerWins += 0;
+        }
+
+        console.log("Computer Wins",computerWins);
+        console.log("Player Wins",playerWins);
+        
+        if (computerWins === 3) {
+            console.log("THE COMPUTER WINS");
+            winnerYet = true;
+        }
+        else if (playerWins === 3) {
+            console.log("THE PLAYER WINS")
+            winnerYet = true;
+        }
+
+
+    }
+
+}
+
+game();
