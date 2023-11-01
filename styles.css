@@ -1,0 +1,74 @@
+#title {
+    display: flex;
+    flex-direction: column;
+    background-color: pink;
+    padding: 1rem;
+    margin: 0.5rem;    
+    text-align: center;
+    font-size: large;
+}
+
+#info {
+    display: flex;
+    flex-direction: column;
+    background-color: palevioletred;
+    text-align: center;
+
+
+}
+
+#buttonDiv {
+    display: flex;
+    flex-direction: row;
+    background-color: red;
+    justify-content: center;
+}
+
+
+button {
+    justify-content: center;
+    margin: 2rem;
+    height: 100px;
+    width: 200px;
+    font-size: 5rem;
+
+}
+
+body {
+    background-color: #ccc;
+}
+
+#resultInfo {
+    display: flex;
+    flex-direction: column;
+    background-color: aquamarine;
+    justify-content: center;
+}
+
+#results {
+    display: flex;
+    flex-direction: row;
+    background-color: purple;
+    margin: 1rem;
+}
+
+
+#player {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+}
+
+#computer {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+}
+
+#winner {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+}
+
+
