@@ -9,3 +9,7 @@ getComputerChoice and playRound Functions - Sept 27, 2023
 
 Java Script Finished - Sept 29, 2023
 - Finished the game() function which tracked player and computer wins and outputs who won the match.  Now that the game() function has been completed, the java script portion of the RPS Project has been finished.  The design of the project and interface will need to be worked on next.
+
+Added User Interface - Nov 1, 2023
+- Came back to the Oden Project and needed to design a user interface that worked with buttons instead of using the console.
+- Created user interface, all that is left is to design and make the interface look better
