@@ -5,15 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RockPaperScissors</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="rps.js"> defer </script>
+
 </head>
 <body>
-    <script src="rps.js"> </script>
     
+    <div id="title"> 
+        <h1> Welcome to Tic Tac Toe </h1>
+    </div>
+    <div id="info"> 
+        <h2> Objective - Defeat the Computer </h2>
+        <div id="computerChoice"> Computer Choice </div>    
+    </div>
 
-    <button id="rock"> Rock </button>
-    <button id="paper"> Paper </button>
-    <button id="scissors"> Scissors </button>
+    <div id="buttonDiv">
+        <button onclick="playRound('rock')"> ✊  </button>
+        <button onclick="playRound('paper')"> 🤚 </button>
+        <button onclick="playRound('scissors')"> ✌️ </button>
+    </div>
 
+    <div id="resultInfo">
+        <div id="results"> Results </div>
+        <div id="player"> Player Score </div>
+        <div id="computer"> Computer Score </div>
+        <div id="winner"> Winner </div>
+    </div>
 
 </body>
 </html>
